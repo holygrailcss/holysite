@@ -8,11 +8,11 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 
 // Task for compile styles
-function style()
+function compileStyles()
 {
     return (
         gulp
-            .src('./scss/style.scss')
+            .src('./src/scss/style.scss')
             .pipe(sourcemaps.init())
             .pipe(sass())
             .on('error', sass.logError) 
@@ -23,6 +23,26 @@ function style()
     );
 }
 
+// Task for copy HTML templates
+function copyTemplates()
+{
+    return (
+        gulp
+            .src('./src/templates/*.html')
+            .pipe(gulp.dest('./dist'))
+    );
+}
+
+// Task for generate compiled output
+function generate()
+{
+    return (
+        gulp
+            .series('compileStyles', 'copyTemplates')()
+    );
+}
+
+// Task for watch changes during development
 function watch()
 {
     browserSync.init({
@@ -34,9 +54,9 @@ function watch()
     gulp.watch('./scss/**/*.scss', style);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
 }
-
-
  
 // Expose the task by exporting it
-exports.style = style;
-exports.watch=watch;
+exports.compileStyles = compileStyles;
+exports.copyTemplates = copyTemplates;
+exports.watch = watch;
+exports.generate = generate;
