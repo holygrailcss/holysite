@@ -34,6 +34,26 @@ function copyTemplates()
     );
 }
 
+// Task for copy assets folder to build
+function copyAssets()
+{
+    return (
+        gulp
+            .src('./assets/**/*')
+            .pipe(gulp.dest('./build/assets'))
+    );
+}
+
+// Task for copy styles folder to build
+function copyStyles()
+{
+    return (
+        gulp
+            .src('./dist/**/*')
+            .pipe(gulp.dest('./build/css'))
+    );
+}
+
 // Task for watch changes during development
 function dev()
 {
@@ -56,6 +76,9 @@ function dev()
 // Expose the task by exporting it
 exports.compileStyles = compileStyles;
 exports.copyTemplates = copyTemplates;
-exports.generate = series(compileStyles, copyTemplates);
+exports.copyAssets = copyAssets;
+exports.copyStyles = copyStyles;
+
+exports.generate = series(compileStyles, copyTemplates, copyAssets, copyStyles);
 
 exports.dev = dev;
