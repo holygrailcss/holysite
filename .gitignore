@@ -5,9 +5,15 @@ package-lock.json
 # IDEs and editors
 .vscode/
 
+# Temporary
+.scss/style.scss
+
 # Assets
 assets/
 
 # Compiled output
 dist/
 build/
+scss/style.scss
+scss/style.scss
+scss/style.scss
