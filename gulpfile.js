@@ -6,11 +6,14 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
+const inject = require('gulp-inject');
 const browserSync = require('browser-sync').create();
 
 // Task for compile styles
 function compileStyles()
 {
+    console.log('Compiling styles...');
+
     return (
         gulp
             .src('./scss/style.scss')
@@ -27,6 +30,8 @@ function compileStyles()
 // Task for copy HTML templates
 function copyTemplates()
 {
+    console.log('Copying templates...');
+
     return (
         gulp
             .src('./src/*.html')
@@ -37,6 +42,8 @@ function copyTemplates()
 // Task for copy assets folder to build
 function copyAssets()
 {
+    console.log('Copying assets...');
+
     return (
         gulp
             .src('./assets/**/*')
@@ -47,6 +54,8 @@ function copyAssets()
 // Task for copy styles folder to build
 function copyStyles()
 {
+    console.log('Copying styles...');
+
     return (
         gulp
             .src('./dist/**/*')
@@ -54,31 +63,44 @@ function copyStyles()
     );
 }
 
-// Task for watch changes during development
-function dev()
+// Task for inject assets to templates
+function injectAssets()
 {
-    // Compile output 
-    gulp.series('compileStyles', 'copyTemplates')();
+    console.log('Injecting assets to templates...');
 
-    // Launch development server
+    var target = gulp.src('./build/*.html');
+    var sources = gulp.src(['./build/css/**/*.css'], { read: false });
+ 
+    return target.pipe(inject(sources, {relative: true}))
+        .pipe(gulp.dest('./build'));
+}
+
+// Task for launch a server for development purposes
+function devServer()
+{
+    console.log('Launching development server...');
+
     browserSync.init({
         server: {
-            baseDir: './build',
-            index: "index.html"
+            baseDir: './build/',
+            index: 'index.html'
         }
     });
     
     // Wait for changes
-    gulp.watch('./scss/**/*.scss', compileStyles);
-    gulp.watch('./src/**/*.html').on('change', browserSync.reload);
+    // gulp.watch('./scss/**/*.scss', gulp.series('compileStyles', 'copyStyles')());
+    // gulp.watch('./src/**/*.html').on('change', gulp.series('copyTemplates', browserSync.reload)());
 }
  
-// Expose the task by exporting it
+// Work tasks
 exports.compileStyles = compileStyles;
 exports.copyTemplates = copyTemplates;
 exports.copyAssets = copyAssets;
 exports.copyStyles = copyStyles;
+exports.injectAssets = injectAssets;
 
-exports.generate = series(compileStyles, copyTemplates, copyAssets, copyStyles);
+// Compile full output
+exports.generate = series(compileStyles, copyTemplates, copyAssets, copyStyles, injectAssets);
 
-exports.dev = dev;
+// Full development workflow
+exports.dev = series(this.generate, devServer);
