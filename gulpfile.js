@@ -1,5 +1,4 @@
-const gulp = require('gulp');
-const { series }  = require('gulp');
+const { src, series, watch, dest }  = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -8,6 +7,7 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const inject = require('gulp-inject');
 const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
 
 // Task for compile styles
 function compileStyles()
@@ -15,8 +15,7 @@ function compileStyles()
     console.log('Compiling styles...');
 
     return (
-        gulp
-            .src('./scss/style.scss')
+            src('./scss/style.scss')
             .pipe(sourcemaps.init())
             .pipe(sass())
             .on('error', sass.logError) 
@@ -24,7 +23,7 @@ function compileStyles()
             .pipe(sourcemaps.write())
             //.pipe(rename('styles.min.css'))
             .pipe(rename('style.css'))
-            .pipe(gulp.dest('./dist'))
+            .pipe(dest('./dist'))
     );
 }
 
@@ -34,9 +33,8 @@ function copyTemplates()
     console.log('Copying templates...');
 
     return (
-        gulp
-            .src('./src/*.html')
-            .pipe(gulp.dest('./build'))
+        src('./src/*.html')
+        .pipe(dest('./build'))
     );
 }
 
@@ -46,9 +44,8 @@ function copyAssets()
     console.log('Copying assets...');
 
     return (
-        gulp
-            .src('./assets/**/*')
-            .pipe(gulp.dest('./build/assets'))
+        src('./assets/**/*')
+        .pipe(dest('./build/assets'))
     );
 }
 
@@ -58,9 +55,8 @@ function copyStyles()
     console.log('Copying styles...');
 
     return (
-        gulp
-            .src('./dist/**/*')
-            .pipe(gulp.dest('./build/css'))
+        src('./dist/**/*')
+        .pipe(dest('./build/css'))
     );
 }
 
@@ -69,11 +65,11 @@ function injectAssets()
 {
     console.log('Injecting assets to templates...');
 
-    var target = gulp.src('./build/*.html');
-    var sources = gulp.src(['./build/css/**/*.css'], { read: false });
+    var target = src('./build/*.html');
+    var sources = src(['./build/css/**/*.css'], { read: false });
  
     return target.pipe(inject(sources, {relative: true}))
-        .pipe(gulp.dest('./build'));
+        .pipe(dest('./build'));
 }
 
 // Task for launch a server for development purposes
@@ -88,9 +84,9 @@ function devServer()
         }
     });
     
-    // Wait for changes
-    // gulp.watch('./scss/**/*.scss', gulp.series('compileStyles', 'copyStyles')());
-    // gulp.watch('./src/**/*.html').on('change', gulp.series('copyTemplates', browserSync.reload)());
+    // Watch tasks
+    watch("./scss/**/*.scss", series('compileStyles', 'copyStyles')).on('change', browserSync.reload);
+    watch('./src/**/*.html', series('copyTemplates', 'injectAssets')).on('change', browserSync.reload)
 }
  
 // Work tasks
