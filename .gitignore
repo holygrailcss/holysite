@@ -10,3 +10,4 @@ assets/
 
 # Compiled output
 dist/
+build/

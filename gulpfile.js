@@ -12,7 +12,7 @@ function compileStyles()
 {
     return (
         gulp
-            .src('./src/scss/style.scss')
+            .src('./scss/style.scss')
             .pipe(sourcemaps.init())
             .pipe(sass())
             .on('error', sass.logError) 
@@ -28,8 +28,8 @@ function copyTemplates()
 {
     return (
         gulp
-            .src('./src/templates/*.html')
-            .pipe(gulp.dest('./dist'))
+            .src('./src/*.html')
+            .pipe(gulp.dest('./build'))
     );
 }
 
@@ -43,20 +43,26 @@ function generate()
 }
 
 // Task for watch changes during development
-function watch()
+function dev()
 {
+    // Compile output 
+    gulp.series('compileStyles', 'copyTemplates')();
+
+    // Launch development server
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './dist/',
+            index: "index.html"
         }
     });
     
+    // Wait for changes
     gulp.watch('./scss/**/*.scss', compileStyles);
-    gulp.watch('./**/*.html').on('change', browserSync.reload);
+    gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 }
  
 // Expose the task by exporting it
 exports.compileStyles = compileStyles;
 exports.copyTemplates = copyTemplates;
-exports.watch = watch;
+exports.dev = dev;
 exports.generate = generate;
