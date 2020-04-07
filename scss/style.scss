@@ -24,7 +24,9 @@
 /*+------------------------------------------------------------+
 |       -FASE 2 : IMPORTA TU HOLYGRAIL
 +------------------------------------------------------------+*/
-@import "../../../holygrailcss/scss/hgpartials.scss";
+//@import "../../holygrailcss/scss/hgpartials.scss";
+
+@import "../node_modules/holygrailcss/scss/hgpartials.scss";
 
 @import "./_post-holygrail.scss";
 
