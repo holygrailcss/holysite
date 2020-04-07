@@ -1,8 +1,6 @@
 {
+    "esversion": 6,
     "node": true,
     "undef": true,
-    "unused": true,
-    "globals": {
-      "MY_GLOBAL": true
-    }
+    "unused": true
 }

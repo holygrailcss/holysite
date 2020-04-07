@@ -1,11 +1,12 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const { series }  = require('gulp');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync').create();
 
 // Task for compile styles
 function compileStyles()
@@ -33,15 +34,6 @@ function copyTemplates()
     );
 }
 
-// Task for generate compiled output
-function generate()
-{
-    return (
-        gulp
-            .series('compileStyles', 'copyTemplates')()
-    );
-}
-
 // Task for watch changes during development
 function dev()
 {
@@ -64,5 +56,6 @@ function dev()
 // Expose the task by exporting it
 exports.compileStyles = compileStyles;
 exports.copyTemplates = copyTemplates;
+exports.generate = series(compileStyles, copyTemplates);
+
 exports.dev = dev;
-exports.generate = generate;
