@@ -2,187 +2,47 @@
 /*+------------------------------------------------------------+
  |       - FASE 1: IMPORTAR FUENTES
  +------------------------------------------------------------+*/
- @import "./fonts.scss";
+ html,body,div,span,select,object
+ {
+   margin:0;
+   padding:0;
+   border:0;
+   outline:0;
+   font-size:100%;
+   vertical-align:baseline;
+   background:transparent
+   }
+   a {
+    color: inherit;
+    text-decoration: none; }
 
 
 
- /*+------------------------------------------------------------+
-  |       -FASE 2 : PERSONALIZA TU HOLYGRAIL
-  +------------------------------------------------------------+*/
- 
-/* GRID VARIABLES */
+ @import "./custom.scss";
 
- $totalCols :      12;
- $padding-global: 8px;
- $padding-button: 8px;
- $padding-btn:   16px;
- $height-inputs: 48px;
-
- 
- /* CONTAINERS MAX WIDTH */
-
- $container:   800px; 
- $container-2: 700px; 
- $container-3: 900px; 
- $container-4: 350px; 
- 
-/* ANIMACIONES */
-
- $transition:278ms;
-
- 
-/* ALTURAS BOXES */
-
- $height-xs:80px;
- $height-sm:100px;
- $height-md:350px;
- $height-lg:400px;
- $height-xl:450px;
- $height-full:100vh;
- $height-home:calc(100vh - 80px);
-
-
-/* BREAKPOINTS */
-
- $breakpoints: (
-    xs: 1px,
-    sm: 786px,
-    md: 992px,
-    lg: 1280px,
-    xl: 1500px);
-
-
-/* ALTURA MINIMA */
-
-    $min-width:319px;
-
-    
-/* TYPES VARIABLES */
-
-$headers:/* name:mobile,768,992,1280,line-height,font */
-(   h1: (32px, 32px, 32px, 40px, 1.2, "medium"),
-    h2: (24px, 24px, 24px, 32px, 1.2, "medium"),
-    h3: (18px, 18px, 18px, 24px, 1.2, "medium"),
-    h4: (16px, 16px, 16px, 18px, 1.2, "medium"),
-    h5: (14px, 14px, 14px, 16px, 1.2, "medium"),
-    h6: (12px, 12px, 12px, 14px, 1.2, "medium"),
-    h7: (10px, 10px, 10px, 12px, 1.2, "medium"),
-    h8: (8px , 8px , 8px , 10px, 1.2, "medium"),
-
-    display1: (32px, 32px, 32px, 48px, 1.2, "bold"),    /* PROMOTIONS BANNER */
-    display2: (20px, 20px, 20px, 40px, 1.2, "bold"),    /* SALES */
-    display3: (16px, 16px, 16px, 24px, 1.5, "medium"),  /* BLACK FRIDAY */
-    display4: (14px, 14px, 14px, 24px, 1.5, "medium"),  /* SALES */
-    display5: (14px, 14px, 14px, 18px, 1.5, "regular"), /* BLACK FRIDAY */
-    display6: (12px, 12px, 12px, 18px, 1.5, "regular"), /* SALES */
-    display7: (14px, 14px, 14px, 18px, 1.5, "medium"),  /* SALES */
-
-    p1: (12px, 12px, 12px, 14px, 1.4, "regular"),
-    p2: (14px, 16px, 16px, 18px, 1.4, "regular"),
-    p4: (14px, 16px, 16px, 18px, 1.4, "medium"));
-    
-
-/* TYPES FIJOS */
-
-$headersFixers: (/*name :  fontsize, lineheight */
-    12 : (12px, 1.5),
-    14 : (14px, 1.5),
-    16 : (16px, 1.5),
-    18 : (18px, 1.5),
-    20 : (20px, 1.5),
-    24 : (24px, 1.5),
-);
-    
-    
-/* MARGINS */
-
-$margin: 
-(m-20: (10px, 20px, 20px, 20px),
-m-30: (10px, 30px, 30px, 30px),
-m-50: (20px, 50px, 50px, 50px));
-
-$margin-x: 
-(mx-10: (0 10px, 0 10px, 0 10px, 0 10px),
-mx-20: (0 10px, 0 20px, 0 20px, 0 20px),
-mx-30: (0 10px, 0 30px, 0 30px, 0 30px),
-mx-50: (0 20px, 0 50px, 0 50px, 0 50px));
-
-$margin-y: 
-(my-10: (10px 0, 10px 0, 10px 0, 10px 0),
-my-20: (10px 0, 20px 0, 20px 0, 20px 0),
-my-30: (10px 0, 30p 0x, 30p 0, 30px 0),
-my-50: (20px 0, 50px 0, 50px 0, 50px 0));
-
-$margin-top: 
-(mt-10: (10px, 10px, 10px, 10px),
-mt-20: (10px, 20px, 20px, 20px),
-mt-30: (10px, 30px, 30px, 30px),
-mt-50: (20px, 50px, 50px, 50px));
-
-$margin-right: 
-(mr-10: (10px, 10px, 10px, 10px),
-mr-20: (10px, 20px, 20px, 20px),
-mr-30: (10px, 30px, 30px, 30px),
-mr-50: (20px, 50px, 50px, 50px));
-
-$margin-bottom: 
-(mb-10: (10px, 10px, 10px, 10px),
-mb-20: (10px, 20px, 20px, 20px),
-mb-30: (10px, 30px, 30px, 30px),
-mb-50: (20px, 50px, 50px, 50px));
-
-$margin-left: 
-(ml-10: (10px, 10px, 10px, 10px),
-ml-20: (10px, 20px, 20px, 20px),
-ml-30: (10px, 30px, 30px, 30px),
-ml-50: (20px, 50px, 50px, 50px));   
-
-      
-/* PADDINGS */
-
-$padding: 
-(p-10: (10px, 10px, 10px, 10px),
-p-20: (10px, 20px, 20px, 20px),
-p-30: (10px, 30px, 30px, 30px),
-p-50: (20px, 50px, 50px, 50px));
-
-$padding-y: 
-(py-20: (10px 0, 20px 0, 20px 0, 20px 0),
-py-30: (10px 0, 30px 0, 30px 0, 30px 0),
-py-50: (20px 0, 30px 0, 40px 0, 50px 0),
-py-60: (24px 16px,24px 16px, 24px 16px, 60px 60px));
-
-$padding-x: 
-(px-20: (0 10px, 0 20px, 0 20px, 0 20px),
-px-30: (0 10px, 0 30px, 0 30px, 0 30px),
-px-50: (0 20px, 0 30px, 0 40px, 0 50px));
-
-$padding-top: 
-(pt-10: (10px, 10px, 10px, 10px),
-pt-20: (10px, 20px, 20px, 20px),
-pt-30: (10px, 30px, 30px, 30px),
-pt-50: (20px, 50px, 50px, 50px));
-
-$padding-bottom: 
-(pb-10: (10px, 10px, 10px, 10px),
-pb-20: (10px, 20px, 20px, 20px),
-pb-30: (10px, 30px, 30px, 30px),
-pb-50: (20px, 50px, 50px, 50px));
-
-$padding-left: 
-(pl-10: (10px, 10px, 10px, 10px),
-pl-20: (10px, 20px, 20px, 20px),
-pl-30: (10px, 30px, 30px, 30px),
-pl-50: (20px, 50px, 50px, 50px));
-
-$padding-right: 
-(pr-10: (10px, 10px, 10px, 10px),
-pr-20: (10px, 20px, 20px, 20px),
-pr-30: (10px, 30px, 30px, 30px),
-pr-50: (20px, 50px, 50px, 50px));
 
 /*+------------------------------------------------------------+
-|       -FASE 3 : IMPORTA TU HOLYGRAIL
+|       -FASE 2 : IMPORTA TU HOLYGRAIL
 +------------------------------------------------------------+*/
+@import "../../../holygrailcss/scss/hgpartials.scss";
 
-@import "../node_modules/holygrailcss/scss/partials";
+@import "./_post-holygrail.scss";
+
+
+.xtitulo{
+    @include font-regular();
+    color:#fff;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 20px;
+    background-color:#999 ;
+    margin: 10px 0;
+    text-align: center;  
+}
+
+hr {
+    border-top: 1px solid #eaeaea;
+    border-bottom:1px solid transparent;
+  }
+
+/* .card4>.card4-img+.card4-content>.card-h>button*/
