@@ -22,7 +22,8 @@ function compileStyles()
             .on('error', sass.logError) 
             .pipe(postcss([autoprefixer(), cssnano()]))
             .pipe(sourcemaps.write())
-            .pipe(rename('styles.min.css'))
+            //.pipe(rename('styles.min.css'))
+            .pipe(rename('style.css'))
             .pipe(gulp.dest('./dist'))
     );
 }
