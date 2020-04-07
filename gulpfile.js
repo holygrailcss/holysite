@@ -19,7 +19,8 @@ function compileStyles()
             .on('error', sass.logError) 
             .pipe(postcss([autoprefixer(), cssnano()]))
             .pipe(sourcemaps.write())
-            .pipe(rename('styles.min.css'))
+            //.pipe(rename('styles.min.css'))
+            .pipe(rename('style.css'))
             .pipe(gulp.dest('./dist'))
     );
 }
@@ -63,7 +64,7 @@ function dev()
     // Launch development server
     browserSync.init({
         server: {
-            baseDir: './build',
+            baseDir: './',
             index: "index.html"
         }
     });
