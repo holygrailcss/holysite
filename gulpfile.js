@@ -43,7 +43,7 @@ function dev()
     // Launch development server
     browserSync.init({
         server: {
-            baseDir: './dist/',
+            baseDir: './build',
             index: "index.html"
         }
     });
