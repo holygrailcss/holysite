@@ -4,3 +4,6 @@ package-lock.json
 
 # IDEs and editors
 .vscode/
+
+# Assets
+assets/
