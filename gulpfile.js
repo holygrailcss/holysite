@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
 // Task for compile styles
-function compileStyles()
+function style()
 {
     console.log('Compiling styles...');
 
@@ -85,19 +85,19 @@ function devServer()
     });
     
     // Watch tasks
-    watch("./scss/**/*.scss", series('compileStyles', 'copyStyles')).on('change', browserSync.reload);
+    watch("./scss/**/*.scss", series('style', 'copyStyles')).on('change', browserSync.reload);
     watch('./src/**/*.html', series('copyTemplates', 'injectAssets')).on('change', browserSync.reload)
 }
  
 // Work tasks
-exports.compileStyles = compileStyles;
+exports.style = style;
 exports.copyTemplates = copyTemplates;
 exports.copyAssets = copyAssets;
 exports.copyStyles = copyStyles;
 exports.injectAssets = injectAssets;
 
 // Compile full output
-exports.generate = series(compileStyles, copyTemplates, copyAssets, copyStyles, injectAssets);
+exports.generate = series(style, copyTemplates, copyAssets, copyStyles, injectAssets);
 
 // Full development workflow
 exports.dev = series(this.generate, devServer);

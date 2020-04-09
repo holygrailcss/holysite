@@ -1,58 +1,125 @@
 
-
-
-hr {
-    border-top: 1px solid #eaeaea;
-    border-bottom:1px solid transparent;
-  }
-/* LAYOUT - BLOCK */
-.container-5 {
-  position: relative;
-  padding: 0 8px;
-  margin: 0 auto;
-  @media (min-width:$break-sm) {
-    max-width: 800px;
-  }
-  @media (min-width:$break-lg) {
-    max-width: 1600px;
-    padding: 0 58px;
-  }
-}
-
-
-  .link6 {
-  @include font-bold;
-    position: relative;
-    display: inline-block;
-    padding: 4px 0;
-    margin: 20px 0;
-    border-bottom: 2px solid #000000;
-    color: black;
-
-    font-size: 16px;
-    line-height: 13px;
-    letter-spacing: 0.5px;
-    text-align: left;
-    text-decoration: none;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-.hg{
-  .p-50{
+.hg {
+  .p-50 {
     padding: 50px;
   }
 }
 
 
-.video-cover{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
 
+
+
+/*********TAGS DE LAS CLASES USADAS***********/
+.h1,
+.h3,
+.h2,
+.h5,
+.display1,
+.miller-h1,
+.miller-h2,
+.miller-h3,
+.text-16-r,
+.link6 {
+  position: relative;
+  &:before {
+
+    font-size: 12px;
+    z-index: 10;
+    position: absolute;
+    background-color: red;
+    color: white;
+    top: 0;
+    left: 0;
+  }
 }
+
+.mb-24 {
+  position: relative;
+  &:after {
+
+    font-size: 12px;
+    z-index: 10;
+    position: absolute;
+    background-color: purple;
+    color: #fff;
+    bottom: -21px;
+    right: -15px;
+    width: 50px;
+    content: "mb-24";
+
+  }
+}
+
+
+
+.h1 {
+  &:before {
+    content: 'h1';
+  }
+}
+.h2 {
+  &:before {
+    content: 'h2';
+  }
+}
+.h3 {
+  &:before {
+    content: 'h3';
+  }
+}
+.h5 {
+  &:before {
+    content: 'h5';
+  }
+}
+.miller-h1 {
+  &:before {
+    content: 'miller-h1';
+  }
+}
+.miller-h2 {
+  &:before {
+    content: 'miller-h2';
+  }
+}
+.miller-h3 {
+  &:before {
+    content: 'miller-h3';
+  }
+}
+.display1 {
+  &:before {
+    content: 'display1';
+  }
+}
+.text-16-r {
+  &:before {
+    content: 'text-16-r';
+  }
+}
+.link6 {
+  &:before {
+    content: 'link6';
+  }
+}
+.header-fake {
+  position: fixed;
+  background: #ffffffc9;
+  width: 100%;
+  text-align: center;
+  border-bottom: gray;
+  z-index: 11;
+}
+
+
+.hg-icon {
+  position: relative;
+  width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.tt{
+  text-transform:uppercase;
+}
+

@@ -1,190 +1,123 @@
-
-
-$font-family-light: 'BasisGrotesque-Light-Pro';
-$font-family-regular: 'BasisGrotesque-Regular-Pro';
-$font-family-medium: 'BasisGrotesque-Medium-Pro';
-$font-family-bold: 'BasisGrotesque-Bold-Pro';
-
-@font-face {
-  font-family: $font-family-bold;
-  src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff2') format('woff2'),
-  url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff') format('woff'),
-  url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.ttf') format('truetype'),
-}
-@font-face {
-  font-family: $font-family-medium;
-  src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff2') format('woff2'),
-  url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff') format('woff'),
-  url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.ttf') format('truetype'),
-}
-@font-face {
-  font-family: $font-family-light;
-  src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff2') format('woff2'),
-  url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff') format('woff'),
-  url('../assets/fonts/basis/BasisGrotesque-Light-Pro.ttf') format('truetype'),
-}
-
-@font-face {
-  font-family: $font-family-regular;
-  src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff2') format('woff2'),
-  url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff') format('woff'),
-  url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.ttf') format('truetype'),
-}
-
-
-$headers:/* name:mobile,768,992,1280,line-height,font */
-(h1: (32px, 32px, 32px, 32px, 40px, 1.2, "medium" ),
- h2: (24px, 24px, 24px, 24px, 32px, 1.2, "medium" ),
- h3: (18px, 18px, 18px, 18px, 24px, 1.2, "medium" ),
- h4: (16px, 16px, 16px, 16px, 18px, 1.2, "medium" ),
- h5: (14px, 14px, 14px, 14px, 16px, 1.2, "medium" ),
- h6: (12px, 12px, 12px, 12px, 14px, 1.2, "medium" ),
- h7: (10px, 10px, 10px, 10px, 12px, 1.2, "medium" ),
- h8: (8px,   8px,  8px,  8px, 10px, 1.2, "medium" ),
- joinh2: (24px, 24px, 24px, 24px, 32px, 1.6, "regular" ),
- joinh3: (32px, 32px, 32x, 32px, 48px, 1.6, "regular" ),
- joinh4: (40px, 40px, 40px, 40px, 40px, 1.2, "regular" ),
-display1: (32px, 32px, 32px, 32px, 48px, 1.2, "bold"   ),/* PROMOTIONS BANNER */
-display2: (20px, 20px, 20px, 20px, 40px, 1.2, "bold"   ),/* SALES */
-display3: (16px, 16px, 16px, 16px, 24px, 1.5, "medium" ),/* BLACK FRIDAY */
-display4: (14px, 14px, 14px, 14px, 24px, 1.5, "medium" ),/* SALES */
-display5: (14px, 14px, 14px, 14px, 18px, 1.5, "regular"),/* BLACK FRIDAY */
-display6: (12px, 12px, 12px, 12px, 18px, 1.5, "regular"),/* SALES */
-display7: (14px, 14px, 14px, 14px, 18px, 1.5, "medium" ),/* SALES + BLACK FRIDAY */
- p1: (12px, 12px, 12px, 12px, 14px, 1.4, "regular"),
- p2: (14px, 14px, 16px, 16px, 18px, 1.4, "regular"),
- p4: (14px, 14px, 16px, 16px, 18px, 1.4, "medium" )) ;
-
- 
-
-/* TYPES FIJOS */
-
-$headersFixers: (/*name :  fontsize, lineheight */
-12 : (12px, 1.5),
-14 : (14px, 1.5),
-16 : (16px, 1.5),
-18 : (18px, 1.5),
-20 : (20px, 1.5),
-24 : (24px, 1.5),
-) ;
-
-
-$mb: "margin-bottom";
-$margin-bottom: /* name : margen bottom*/
-(
-  
-  mb-4: (4px, 4px, 4px, 4px),
-mb-10: (10px, 10px, 10px, 10px),
- mb-16: (10px, 10px, 16px, 16px),
- mb-20: (10px, 20px, 20px, 20px),
- mb-24: (20px, 20px, 24px, 24px),
- mb-30: (10px, 30px, 30px, 30px),
- mb-40: (20px, 40px, 40px, 40px),
- mb-50: (20px, 50px, 50px, 50px));
-
-
-.hg .p-50{
-  padding: 50px;
-}
-
-
-
-
-
-
-
-
-// 300 400 700
-@import url("https://use.typekit.net/puz7rnx.css");
-
-
 $font-family-primary: 'BasisGrotesque-Regular-Pro';
-
 $font-family-light: 'BasisGrotesque-Light-Pro';
 $font-family-regular: 'BasisGrotesque-Regular-Pro';
 $font-family-medium: 'BasisGrotesque-Medium-Pro';
 $font-family-bold: 'BasisGrotesque-Bold-Pro';
-
 $font-family-primary: 'BasisGrotesque-Regular-Pro';
 $font-weight-light: inherit;
 $font-weight-regular: inherit;
 $font-weight-medium: inherit;
 $font-weight-bold: inherit;
+@font-face {
+  font-family: $font-family-bold;
+  src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot');
+  src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff2') format('woff2'),
+    url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff') format('woff'),
+    url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.ttf') format('truetype'),
+}
+@font-face {
+  font-family: $font-family-medium;
+  src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot');
+  src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff2') format('woff2'),
+    url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff') format('woff'),
+    url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.ttf') format('truetype'),
+}
+@font-face {
+  font-family: $font-family-light;
+  src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot');
+  src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff2') format('woff2'),
+    url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff') format('woff'),
+    url('../assets/fonts/basis/BasisGrotesque-Light-Pro.ttf') format('truetype'),
+}
+@font-face {
+  font-family: $font-family-regular;
+  src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot');
+  src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff2') format('woff2'),
+    url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff') format('woff'),
+    url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.ttf') format('truetype'),
+}
+// 300 400 700
+@import url("https://use.typekit.net/puz7rnx.css");
+$font-family-secondary: "miller-display";
+$font-weight-secondary-regular:300;
+$font-weight-secondary-medium:400;
+$font-weight-secondary-bold:700;
+$headers:
+/* name:mobile,768,992,1280,line-height,font */
+(h1: (32px, 32px, 32px, 32px, 40px, 1.2, "medium"),
+  h2: (24px, 24px, 24px, 24px, 32px, 1.2, "medium"),
+  h3: (18px, 18px, 18px, 18px, 24px, 1.2, "medium"),
+  h4: (16px, 16px, 16px, 16px, 18px, 1.2, "medium"),
+  h5: (14px, 14px, 14px, 14px, 16px, 1.2, "medium"),
+  h6: (12px, 12px, 12px, 12px, 14px, 1.2, "medium"),
+  h7: (10px, 10px, 10px, 10px, 12px, 1.2, "medium"),
+  h8: (8px, 8px, 8px, 8px, 10px, 1.2, "medium"),
 
+  miller-h1: (32px, 32px, 32px, 32px, 40px, 1.2, "2-regular"),
+  miller-h2: (24px, 24px, 24px, 24px, 32px, 1.2, "2-regular"),
+  miller-h3: (18px, 18px, 18px, 18px, 24px, 1.2, "2-regular"),
+  miller-h4: (16px, 16px, 16px, 16px, 18px, 1.2, "2-regular"),
+  miller-h5: (14px, 14px, 14px, 14px, 16px, 1.2, "2-regular"),
+  miller-h6: (12px, 12px, 12px, 12px, 14px, 1.2, "2-regular"),
+  miller-h7: (10px, 10px, 10px, 10px, 12px, 1.2, "2-regular"),
+  miller-h8: (8px, 8px, 8px, 8px, 10px, 1.2, "2-regular"),
+
+  display1: (32px, 32px, 32px, 32px, 48px, 1.2, "bold"), /* PROMOTIONS BANNER */
+  display2: (20px, 20px, 20px, 20px, 40px, 1.2, "bold"), /* SALES */
+  display3: (16px, 16px, 16px, 16px, 24px, 1.5, "medium"), /* BLACK FRIDAY */
+  display4: (14px, 14px, 14px, 14px, 24px, 1.5, "medium"), /* SALES */
+  display5: (14px, 14px, 14px, 14px, 18px, 1.5, "regular"), /* BLACK FRIDAY */
+  display6: (12px, 12px, 12px, 12px, 18px, 1.5, "regular"), /* SALES */
+  display7: (14px, 14px, 14px, 14px, 18px, 1.5, "medium"), /* SALES + BLACK FRIDAY */
+  p1: (12px, 12px, 12px, 12px, 14px, 1.4, "regular"),
+  p2: (14px, 14px, 16px, 16px, 18px, 1.4, "regular"),
+  p4: (14px, 14px, 16px, 16px, 18px, 1.4, "medium"));
+/* TYPES FIJOS */
+$headersFixers: (
+  /*name :  fontsize, lineheight */
+  12 : (12px, 1.5),
+  14 : (14px, 1.5),
+  16 : (16px, 1.5),
+  18 : (18px, 1.5),
+  20 : (20px, 1.5),
+  24 : (24px, 1.5),
+);
+$mb: "margin-bottom";
+$margin-bottom:
+/* name : margen bottom*/
+(mb-4: (4px, 4px, 4px, 4px),
+  mb-10: (10px, 10px, 10px, 10px),
+  mb-16: (10px, 10px, 16px, 16px),
+  mb-20: (10px, 20px, 20px, 20px),
+  mb-24: (20px, 20px, 24px, 24px),
+  mb-30: (10px, 30px, 30px, 30px),
+  mb-40: (20px, 40px, 40px, 40px),
+  mb-50: (20px, 50px, 50px, 50px));
+.hg .p-50 {
+  padding: 50px;
+}
 /*** ICONS ***/
 @font-face {
-    font-family: 'FontDutti';
-    src: url('../assets/fonts/FontDutti.eot') format('eot');
-    src: url('../assets/fonts/FontDutti.eot#iefix') format('embedded-opentype'),
-        url('../assets/fonts/FontDutti.woff?v=1.8') format('woff'),
-        url('../assets/fonts/FontDutti.ttf') format('truetype'),
-        url('../assets/fonts/FontDutti.svg#FontDutti') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'FontDutti';
+  src: url('../assets/fonts/FontDutti.eot') format('eot');
+  src: url('../assets/fonts/FontDutti.eot#iefix') format('embedded-opentype'),
+    url('../assets/fonts/FontDutti.woff?v=1.8') format('woff'),
+    url('../assets/fonts/FontDutti.ttf') format('truetype'),
+    url('../assets/fonts/FontDutti.svg#FontDutti') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'FontDutti_v3';
-    src: url('../assets/fonts/FontDutti_v3.eot') format('eot');
-    src: url('../assets/fonts/FontDutti_v3.eot#iefix') format('embedded-opentype'),
-        url('../assets/fonts/FontDutti_v3.woff?v=1.8') format('woff'),
-        url('../assets/fonts/FontDutti_v3.ttf') format('truetype'),
-        url('../assets/fonts/FontDutti_v3.svg#FontDutti_v3') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: $font-family-bold;
-    src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot');
-    src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff2') format('woff2'),
-        url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff') format('woff'),
-        url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.ttf') format('truetype'),
-}
-@font-face {
-    font-family: $font-family-medium;
-    src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot');
-    src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff2') format('woff2'),
-        url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff') format('woff'),
-        url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.ttf') format('truetype'),
-}
-@font-face {
-    font-family: $font-family-light;
-    src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot');
-    src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff2') format('woff2'),
-        url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff') format('woff'),
-        url('../assets/fonts/basis/BasisGrotesque-Light-Pro.ttf') format('truetype'),
-}
-@font-face {
-    font-family: $font-family-regular;
-    src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot');
-    src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff2') format('woff2'),
-        url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff') format('woff'),
-        url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.ttf') format('truetype'),
-}
-
-.miller-r{
-  font-family: "miller-display",serif!important;
-  font-weight: 300!important;
-}
-
-.miller-m{
-  font-family: "miller-display",serif!important;
-  font-weight: 400!important;
-}
-
-.miller-b{
-  font-family: "miller-display",serif!important;
-  font-weight: 700!important;
-
+  font-family: 'FontDutti_v3';
+  src: url('../assets/fonts/FontDutti_v3.eot') format('eot');
+  src: url('../assets/fonts/FontDutti_v3.eot#iefix') format('embedded-opentype'),
+    url('../assets/fonts/FontDutti_v3.woff?v=1.8') format('woff'),
+    url('../assets/fonts/FontDutti_v3.ttf') format('truetype'),
+    url('../assets/fonts/FontDutti_v3.svg#FontDutti_v3') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
