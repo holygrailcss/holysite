@@ -1,51 +1,43 @@
-$font-family-primary: 'BasisGrotesque-Regular-Pro';
-$font-family-light: 'BasisGrotesque-Light-Pro';
-$font-family-regular: 'BasisGrotesque-Regular-Pro';
-$font-family-medium: 'BasisGrotesque-Medium-Pro';
-$font-family-bold: 'BasisGrotesque-Bold-Pro';
-$font-family-primary: 'BasisGrotesque-Regular-Pro';
-$font-weight-light: inherit;
-$font-weight-regular: inherit;
-$font-weight-medium: inherit;
-$font-weight-bold: inherit;
-@font-face {
-  font-family: $font-family-bold;
-  src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff2') format('woff2'),
-    url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.woff') format('woff'),
-    url('../assets/fonts/basis/BasisGrotesque-Bold-Pro.ttf') format('truetype'),
-}
-@font-face {
-  font-family: $font-family-medium;
-  src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff2') format('woff2'),
-    url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.woff') format('woff'),
-    url('../assets/fonts/basis/BasisGrotesque-Medium-Pro.ttf') format('truetype'),
-}
-@font-face {
-  font-family: $font-family-light;
-  src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Light-Pro.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff2') format('woff2'),
-    url('../assets/fonts/basis/BasisGrotesque-Light-Pro.woff') format('woff'),
-    url('../assets/fonts/basis/BasisGrotesque-Light-Pro.ttf') format('truetype'),
-}
-@font-face {
-  font-family: $font-family-regular;
-  src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot');
-  src: url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff2') format('woff2'),
-    url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.woff') format('woff'),
-    url('../assets/fonts/basis/BasisGrotesque-Regular-Pro.ttf') format('truetype'),
-}
-// 300 400 700
-@import url("https://use.typekit.net/puz7rnx.css");
-$font-family-secondary: "miller-display";
-$font-weight-secondary-regular:300;
-$font-weight-secondary-medium:400;
-$font-weight-secondary-bold:700;
+
+
+
+ 
+/*** Fuente primaria  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet"> **/
+
+/*** Fuente secundaria  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"> **/
+
+
+/** font-family: 'Source Sans Pro', sans-serif ;  **/
+
+
+$font-family-primary: 'Source Sans Pro', sans-serif ;
+
+$font-family-light:   'Source Sans Pro', sans-serif ;
+$font-family-regular: 'Source Sans Pro', sans-serif ;
+$font-family-medium:  'Source Sans Pro', sans-serif ;
+$font-family-bold:    'Source Sans Pro', sans-serif ;
+
+/** font-family: 'Playfair Display', serif; **/
+
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 900;
+
+
+$font-family-secondary: 'Playfair Display', serif;
+
+$font-weight-secondary-light:200;
+$font-weight-secondary-regular:400;
+$font-weight-secondary-medium:700;
+$font-weight-secondary-bold:900;
+
+
+
+
+
+
+
 $headers:
 /* name:mobile,768,992,1280,line-height,font */
 (h1: (32px, 32px, 32px, 32px, 40px, 1.2, "medium"),
@@ -99,25 +91,4 @@ $margin-bottom:
   mb-50: (20px, 50px, 50px, 50px));
 .hg .p-50 {
   padding: 50px;
-}
-/*** ICONS ***/
-@font-face {
-  font-family: 'FontDutti';
-  src: url('../assets/fonts/FontDutti.eot') format('eot');
-  src: url('../assets/fonts/FontDutti.eot#iefix') format('embedded-opentype'),
-    url('../assets/fonts/FontDutti.woff?v=1.8') format('woff'),
-    url('../assets/fonts/FontDutti.ttf') format('truetype'),
-    url('../assets/fonts/FontDutti.svg#FontDutti') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'FontDutti_v3';
-  src: url('../assets/fonts/FontDutti_v3.eot') format('eot');
-  src: url('../assets/fonts/FontDutti_v3.eot#iefix') format('embedded-opentype'),
-    url('../assets/fonts/FontDutti_v3.woff?v=1.8') format('woff'),
-    url('../assets/fonts/FontDutti_v3.ttf') format('truetype'),
-    url('../assets/fonts/FontDutti_v3.svg#FontDutti_v3') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
