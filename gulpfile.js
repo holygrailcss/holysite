@@ -4,14 +4,17 @@ const {
     watch,
     dest
 } = require('gulp');
+var gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const inject = require('gulp-inject');
 const browserSync = require('browser-sync').create();
+
+
+const rename = require('gulp-rename');
 const reload = browserSync.reload;
 
 // Task for compile styles
@@ -19,16 +22,20 @@ function style() {
     console.log('Compiling styles...');
 
     return (
-        src('./scss/style.scss')
+        src('./scss/style.scss', './scss/guide.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .on('error', sass.logError)
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write())
         //.pipe(rename('styles.min.css'))
-        .pipe(rename('style.css'))
+    
         .pipe(dest('./dist'))
     );
+
+
+
+
 }
 
 
@@ -151,7 +158,7 @@ function devServer() {
     console.log('Launching development server...');
     browserSync.init({
         server: {
-            baseDir: './dist/',
+            baseDir: './build/',
         }
     });
 
@@ -160,12 +167,30 @@ function devServer() {
     watch('./src/**/*.html', series('copyTemplatesWatch', 'injectAssetsWatch')).on('change', browserSync.reload)
 }
 
-/********* WATCH *********** */
+/********* WATCH PROPIO *********** */
 
 
+function guideStyle() {
+    //donde esta mi scss 
+    return gulp.src('./scss/**/*.scss')
+        //pasamos el archivo y lo compilamos
+        .pipe(sass())
+        .pipe(gulp.dest('./dist'))
+        .pipe(browserSync.stream())
+}
+function guide() {
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    })
+    gulp.watch('./scss/**/*.scss', guideStyle)
+    gulp.watch('./src/**/*.html').on('change', browserSync.reload);
+}
+exports.guide = guide;
 
 
-
+/********* WATCH PROPIO *********** */
 
 // Work tasks
 
