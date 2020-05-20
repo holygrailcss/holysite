@@ -17,9 +17,9 @@ const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const reload = browserSync.reload;
 
-// Task for compile styles
+// Compilamos los estilos
 function style() {
-    console.log('Compiling styles...');
+    console.log('Compilamos estilos...');
 
     return (
         src('./scss/style.scss', './scss/guide.scss')
@@ -28,7 +28,6 @@ function style() {
         .on('error', sass.logError)
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write())
-        //.pipe(rename('styles.min.css'))
     
         .pipe(dest('./dist'))
     );
@@ -38,42 +37,55 @@ function style() {
 
 }
 
+/************************** */
+/* COPIAMOS DE DIST A BUILD*/
+/*  
+              __    
+             /  |   
+             `| |   
+              | |   
+             _| |_  
+            |_____|
+        
+*/
 
-// Task for copy assets folder to build
+
+// Copiamos  ASSETS de dist a build
 function copyAssets() {
     console.log('Copying assets...');
-
     return (
         src('./assets/**/*')
         .pipe(dest('./build/assets'))
     );
 }
-
-
-
-
-
-
-// Task for copy HTML templates
+// Copiamos HTML de dist a build
 function copyTemplates() {
     console.log('Copying templates...');
-
     return (
         src('./src/*.html')
         .pipe(dest('./build'))
     );
 }
-
-
-// Task for copy styles folder to build
+// Copiamos CSS de dist a build
 function copyStyles() {
     console.log('Copying styles...');
-
     return (
-        src('./dist/**/*')
+        src('./dist/*.css')
         .pipe(dest('./build/css'))
     );
 }
+
+/************* INJECT
+           _____   
+          / ___ `. 
+         |_/___) | 
+         .'____.' 
+        / /_____  
+        |_______| 
+         
+*/
+
+
 
 // Task for inject assets to templates
 function injectAssets() {
@@ -107,10 +119,16 @@ function buildServer() {
 }
 
 
+/************* WATCH
+               ______   
+             / ____ `. 
+             `'  __) | 
+             _  |__ '. 
+            | \____) | 
+            \______.' 
+                    
 
-
-
-/********* WATCH *********** */
+ *********** */
 
 
 
@@ -209,6 +227,4 @@ exports.generate = series(style, copyTemplates, copyAssets, copyStyles, injectAs
 
 // Full development workflow
 exports.build = series(this.generate, buildServer);
-
-
 exports.dev = series(this.generate, devServer);
