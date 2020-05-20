@@ -28,7 +28,7 @@ function style() {
         .on('error', sass.logError)
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write())
-    
+
         .pipe(dest('./dist'))
     );
 
@@ -84,7 +84,6 @@ function copyStyles() {
         |_______| 
          
 */
-
 
 
 // Task for inject assets to templates
@@ -185,7 +184,7 @@ function devServer() {
     watch('./src/**/*.html', series('copyTemplatesWatch', 'injectAssetsWatch')).on('change', browserSync.reload)
 }
 
-/********* WATCH PROPIO *********** */
+/********* WATCH guia *********** */
 
 
 function guideStyle() {
@@ -196,6 +195,7 @@ function guideStyle() {
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.stream())
 }
+
 function guide() {
     browserSync.init({
         server: {
@@ -211,7 +211,6 @@ exports.guide = guide;
 /********* WATCH PROPIO *********** */
 
 // Work tasks
-
 
 exports.styleWatch = styleWatch;
 exports.style = style;

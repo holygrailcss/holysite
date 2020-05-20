@@ -100,6 +100,5 @@ Developed by Manuel Ruiz. Please list all bugs and feature requests in the Githu
 
 This toolkit is based on the work of the following fine people & projects.
 
-- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
-- [Scalable and Modular Architecture for CSS](http://smacss.com/book) (<abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr>)
-- [Atomic Design](http://atomicdesign.bradfrost.com)
+- [Holygrail Boilerplate](https://github.com/holygrailcss/holygrail-boilerplate)
+
