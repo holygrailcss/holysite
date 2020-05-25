@@ -1,15 +1,15 @@
 
-# Sassy Starter [![Stories in Ready](https://badge.waffle.io/minamarkham/sassy-starter.png?label=ready&title=Ready)](https://waffle.io/minamarkham/sassy-starter)
+# HOLYSITE 
 
 A starter toolkit based on [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS) and [Atomic Design](http://atomicdesign.bradfrost.com) for [Sass](http://sass-lang.com/) (SCSS) projects. Do what you'd like with it :)
 
-Styles are broken down into the following groups: **Base, Layout, Atoms, Molecules, Organisms, States, Themes, Utilities and Overrides**
+Styles are broken down into the following groups: **custom.scss, style.scss, guide.scss, templates.scss, tags.scss, post-holygrail**
 
 ## Getting Started
 
-1. If needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
-- If needed, install `gulp` with `npm install gulp -g`.
-- Clone this repo with `git clone https://github.com/minamarkham/sassy-starter` or download the zip.
+1.  [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
+-  install `gulp` with `npm install gulp -g`.
+- Clone this repo with `git clone https://github.com/holygrailcss/holysite.git` or download the zip.
 - In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
 - In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`. This should install all [dependencies](#dependencies).
 - In terminal, enter `gulp`.
@@ -22,8 +22,10 @@ _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the 
 
 ## Requirements
 - Node/NPM
-- LibSass
+- nodeSass
+- holygrailcss
 - Gulp
+- browser sync
 
 ## Features
 - Live reloading with BrowserSync
@@ -31,15 +33,14 @@ _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the 
 - Github Pages deployment
 - Sass linting (based on [default](https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml) config)
 - Autoprefixer configuration
-- SMACSS and Atomic Design-based folder structure
+- SEM BIO and Atomic Design-based folder structure
 - `px` to `em`, `px` to `rem` and other useful functions.
 - Mixins for inlining media queries.
 * Useful CSS helper classes.
 * Default print styles, performance optimized.
 * "Delete-key friendly." Easy to strip out parts you don't need.
 - Includes:
-  - [`Normalize.css`](https://necolas.github.com/normalize.css/)
-    for CSS normalizations and common bug fixes
+
   - [`CSS Pesticide`](https://pesticide.io)
     for easy CSS debugging
   - [`jQuery`](https://jquery.com/) via CDN, with a local fallback
@@ -50,16 +51,19 @@ _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the 
 
 ## Dependencies
 ```
-"autoprefixer": "^9.7.4",
-"cssnano": "^4.1.10",
-"gulp": "^4.0.2",
-"gulp-postcss": "^8.0.0",
-"gulp-rename": "^2.0.0",
-"gulp-sass": "^4.0.2",
-"gulp-sourcemaps": "^2.6.5",
-"holygrailcss": "^1.0.7",
-"interactjs": "^1.8.5",
-"node-sass": "^4.13.1"
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "eslint": "^4.19.1",
+    "gulp": "^4.0.2",
+    "gulp-inject": "^5.0.5",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "holygrailcss": "^1.4.8",
+    "interactjs": "^1.8.5",
+    "node-sass": "^4.13.1"
 
 ```
 
