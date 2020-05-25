@@ -12,3 +12,24 @@
     display: none;
   }
 }
+
+.xtitulo{
+  @include font-regular();
+  color:#fff;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 20px;
+  background-color:#999 ;
+  margin: 10px 0;
+  text-align: center;  
+}
+
+hr {
+  border-top: 1px solid #eaeaea;
+  border-bottom:1px solid transparent;
+}
+
+
+body{
+background-color: green;
+}

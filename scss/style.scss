@@ -22,56 +22,26 @@
 /*+------------------------------------------------------------+
 |       -FASE 2 : IMPORTA TU HOLYGRAIL
 +------------------------------------------------------------+*/
+
+
+//desde tu duttistatic
+
 @import "../../holygrailcss/scss/partials";
-@import "../../holygrailcss/scss/abstract/0debug";
+
+//desde tu nodemodules
 
 //@import "../node_modules/holygrailcss/scss/hgpartials.scss";
 
+
+
+//debugamos
+
+//@import "../../holygrailcss/scss/abstract/0debug";
+
+
+/*+------------------------------------------------------------+
+|       -FASE 3 : OVERRIDE Tu HOLYGRAIL
++------------------------------------------------------------+*/
+
 @import "./_post-holygrail.scss";
 
-.xtitulo{
-    @include font-regular();
-    color:#fff;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 5px 20px;
-    background-color:#999 ;
-    margin: 10px 0;
-    text-align: center;  
-}
-
-hr {
-    border-top: 1px solid #eaeaea;
-    border-bottom:1px solid transparent;
-  }
-
-/* .card4>.card4-img+.card4-content>.card-h>button*/
-
-
-@for $i from 1 through 8 {
-  .h#{$i}, .h#{$i}:after {
-      @include random-bgr();
-  }
-  .h#{$i} {
-      position: relative;
-      &:after {
-          content:"h#{$i}";
-
-          position: absolute;
-          color: #fff;
-          padding: 3px;
-          left: 0;
-          top: -20px;
-          font-size: 10px;
-          font-weight: 700;
-          width: 20px;
-          height: 20px;
-          text-align: center;
-          line-height: 1.5;
-      }
-  }
-}
-
-body{
-  background-color: green;
-}
