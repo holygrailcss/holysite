@@ -18,10 +18,12 @@
 
  @import "./custom.scss";
 
+
 /*+------------------------------------------------------------+
 |       -FASE 2 : IMPORTA TU HOLYGRAIL
 +------------------------------------------------------------+*/
 @import "../../holygrailcss/scss/partials";
+@import "../../holygrailcss/scss/abstract/0debug";
 
 //@import "../node_modules/holygrailcss/scss/hgpartials.scss";
 
@@ -44,3 +46,32 @@ hr {
   }
 
 /* .card4>.card4-img+.card4-content>.card-h>button*/
+
+
+@for $i from 1 through 8 {
+  .h#{$i}, .h#{$i}:after {
+      @include random-bgr();
+  }
+  .h#{$i} {
+      position: relative;
+      &:after {
+          content:"h#{$i}";
+
+          position: absolute;
+          color: #fff;
+          padding: 3px;
+          left: 0;
+          top: -20px;
+          font-size: 10px;
+          font-weight: 700;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          line-height: 1.5;
+      }
+  }
+}
+
+body{
+  background-color: green;
+}
