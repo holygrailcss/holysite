@@ -225,5 +225,5 @@ exports.injectAssetsWatch = injectAssetsWatch;
 exports.generate = series(style, copyTemplates, copyAssets, copyStyles, injectAssets);
 
 // Full development workflow
-exports.build = series(this.generate, buildServer);
+exports.build = series(this.generate, buildServer,guide);
 exports.dev = series(this.generate, devServer);
