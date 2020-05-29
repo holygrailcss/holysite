@@ -1,41 +1,35 @@
-
 /*+------------------------------------------------------------+
  |       - FASE 1: IMPORTAR FUENTES
  +------------------------------------------------------------+*/
- html,body,div,span,select,object
- {
-   margin:0;
-   padding:0;
-   border:0;
-   outline:0;
-   font-size:100%;
-   vertical-align:baseline;
-   background:transparent
-   }
-   a {
-    color: inherit;
-    text-decoration: none; }
-
- @import "./custom.scss";
-
-
+html,
+body,
+div,
+span,
+select,
+object {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+@import "./custom.scss";
 /*+------------------------------------------------------------+
 |       -FASE 2 : IMPORTA TU HOLYGRAIL
 +------------------------------------------------------------+*/
-
-
 //desde tu duttistatic
-
 @import "../../holygrailcss/scss/partials";
 
+
 //desde tu nodemodules
-
 //@import "../node_modules/holygrailcss/scss/hgpartials.scss";
-
-
-
 //debugamos
-
 //@import "../../holygrailcss/scss/abstract/0debug";
 
 
@@ -43,5 +37,80 @@
 |       -FASE 3 : OVERRIDE Tu HOLYGRAIL
 +------------------------------------------------------------+*/
 
-@import "./_post-holygrail.scss";
 
+
+$green-:#368a3f;
+$green-light:#73c6ca;
+$green-ultralight:#94cca8;
+$blue:#70b7d9;
+
+
+$color-gris:#878686;
+
+
+
+@import "./_swiper.scss";
+@import "./_post-holygrail.scss";
+strong {
+  color: $color-verdeclaro;
+}
+.page-bg {
+  overflow: hidden;
+  color: #878686;
+  background-color: #fff;
+}
+.block-a-1 {
+  border-radius: 16px;
+  margin-bottom: 16px;
+  background-color: #333d46;
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 133.33333%;
+  }
+  .block-a-1-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 40px 40px 48px;
+    color: #8e8e98;
+    strong,
+    .h4,
+    .h6 {
+      color: white;
+    }
+  }
+}
+.block-a-2 {
+  border-radius: 16px;
+  margin-bottom: 16px;
+  border: 1px solid $color-verdeclaro;
+  position: relative;
+  .block-a-2-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 40px 40px 48px
+  }
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 60%
+  }
+}

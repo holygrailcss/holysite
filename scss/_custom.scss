@@ -93,6 +93,19 @@ $headersFixers: (
   20 : (20px, 1.5),
   24 : (24px, 1.5),
 );
+
+$headersFluids: (/*name :  fontsize, lineheight */
+12 : (12px, 12px, 1.2),
+14 : (14px, 12px, 1.2),
+16 : (16px, 12px, 1.2),
+18 : (18px, 12px, 1.2),
+20 : (14px, 32px, 1.2),
+50 : (30px, 50px, 1.2),
+100 : (40px, 100px, .9)
+
+) ;
+
+
 $mb: "margin-bottom";
 $margin-bottom:
 /* name : margen bottom*/

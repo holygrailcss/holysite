@@ -5,6 +5,12 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
 
 ## Getting Started
 
+
+
+1- Create a folder git clone https://github.com/holygrailcss/holysite.git
+
+2- gulp build
+
 1. If needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
 - If needed, install `gulp` with `npm install gulp -g`.
 
