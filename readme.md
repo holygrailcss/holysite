@@ -1,7 +1,7 @@
 
-# Sassy Starter [![Stories in Ready](https://badge.waffle.io/minamarkham/sassy-starter.png?label=ready&title=Ready)](https://waffle.io/minamarkham/sassy-starter)
 
-A starter toolkit based on [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS) and [Atomic Design](http://atomicdesign.bradfrost.com) for [Sass](http://sass-lang.com/) (SCSS) projects. Do what you'd like with it :)
+#HOLYSITE
+
 
 Styles are broken down into the following groups: **Base, Layout, Atoms, Molecules, Organisms, States, Themes, Utilities and Overrides**
 
@@ -51,16 +51,19 @@ _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the 
 
 ## Dependencies
 ```
-"autoprefixer": "^9.7.4",
-"cssnano": "^4.1.10",
-"gulp": "^4.0.2",
-"gulp-postcss": "^8.0.0",
-"gulp-rename": "^2.0.0",
-"gulp-sass": "^4.0.2",
-"gulp-sourcemaps": "^2.6.5",
-"holygrailcss": "^1.0.7",
-"interactjs": "^1.8.5",
-"node-sass": "^4.13.1"
+      "autoprefixer": "^9.7.4",
+        "browser-sync": "^2.26.7",
+        "cssnano": "^4.1.10",
+        "eslint": "^4.19.1",
+        "gulp": "^4.0.2",
+        "gulp-inject": "^5.0.5",
+        "gulp-postcss": "^8.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "holygrailcss": "^1.4.8",
+        "interactjs": "^1.8.5",
+        "node-sass": "^4.13.1"
 
 ```
 
@@ -73,7 +76,6 @@ _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the 
   -build
 
 
-s
 
 ## Directory structure
 
