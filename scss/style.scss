@@ -25,30 +25,19 @@ a {
 +------------------------------------------------------------+*/
 //desde tu duttistatic
 @import "../../holygrailcss/scss/partials";
-
-
 //desde tu nodemodules
 //@import "../node_modules/holygrailcss/scss/hgpartials.scss";
 //debugamos
 //@import "../../holygrailcss/scss/abstract/0debug";
-
-
 /*+------------------------------------------------------------+
 |       -FASE 3 : OVERRIDE Tu HOLYGRAIL
 +------------------------------------------------------------+*/
 $primary-text:#8e8e98;
-
-
 $green:#368a3f;
 $green-light:#73c6ca;
 $green-ultralight:#94cca8;
 $blue:#70b7d9;
-
-
 $color-gris:#878686;
-
-
-
 @import "./_swiper.scss";
 @import "./_post-holygrail.scss";
 strong {
@@ -58,6 +47,12 @@ strong {
   overflow: hidden;
   color: $primary-text;
   background-color: #fff;
+}
+.page {
+  padding: 0 16px;
+  @media (min-width:$break-md) {
+    padding: 0;
+  }
 }
 .block-a-1 {
   border-radius: 16px;
@@ -113,4 +108,8 @@ strong {
     width: 100%;
     padding-top: 60%
   }
+}
+
+.container-overflow{
+  padding-bottom: 50px;
 }
