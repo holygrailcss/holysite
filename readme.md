@@ -1,7 +1,5 @@
 
-
-#HOLYSITE
-
+# HOLYSITE
 
 Styles are broken down into the following groups: **Base, Layout, Atoms, Molecules, Organisms, States, Themes, Utilities and Overrides**
 
