@@ -70,7 +70,7 @@
   position: absolute;
   width: 100px;
   height: 8px;
-  background-color: #3f474e;
+  background-color: #fff;
   bottom: 30px;
   border-radius: 50px;
 }
@@ -82,11 +82,11 @@
  .active-ball,  .swiper-slide-active .active-ball {
   position: absolute;
   height: 8px;
-  background-color: #f4325f;
+  background-color: $green;
   bottom: 0;
   border-radius: 50px;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
-  color: $color-verdeclaro;
+  color: $green-light;
 }

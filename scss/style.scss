@@ -36,10 +36,10 @@ a {
 /*+------------------------------------------------------------+
 |       -FASE 3 : OVERRIDE Tu HOLYGRAIL
 +------------------------------------------------------------+*/
+$primary-text:#8e8e98;
 
 
-
-$green-:#368a3f;
+$green:#368a3f;
 $green-light:#73c6ca;
 $green-ultralight:#94cca8;
 $blue:#70b7d9;
@@ -52,17 +52,17 @@ $color-gris:#878686;
 @import "./_swiper.scss";
 @import "./_post-holygrail.scss";
 strong {
-  color: $color-verdeclaro;
+  color: $green-light;
 }
 .page-bg {
   overflow: hidden;
-  color: #878686;
+  color: $primary-text;
   background-color: #fff;
 }
 .block-a-1 {
   border-radius: 16px;
   margin-bottom: 16px;
-  background-color: #333d46;
+  background-color: $green-light;
   position: relative;
   &:before {
     display: block;
@@ -82,7 +82,7 @@ strong {
     -webkit-box-direction: normal;
     flex-direction: column;
     padding: 40px 40px 48px;
-    color: #8e8e98;
+    color: $primary-text;
     strong,
     .h4,
     .h6 {
@@ -93,7 +93,7 @@ strong {
 .block-a-2 {
   border-radius: 16px;
   margin-bottom: 16px;
-  border: 1px solid $color-verdeclaro;
+  border: 1px solid $green-light;
   position: relative;
   .block-a-2-content {
     position: absolute;
