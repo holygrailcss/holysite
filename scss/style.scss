@@ -15,6 +15,8 @@ object {
   vertical-align: baseline;
   background: transparent
 }
+
+
 a {
   color: inherit;
   text-decoration: none;
@@ -29,6 +31,10 @@ a {
 //@import "../node_modules/holygrailcss/scss/hgpartials.scss";
 //debugamos
 //@import "../../holygrailcss/scss/abstract/0debug";
+
+
+
+
 /*+------------------------------------------------------------+
 |       -FASE 3 : OVERRIDE Tu HOLYGRAIL
 +------------------------------------------------------------+*/
@@ -38,78 +44,41 @@ $green-light:#73c6ca;
 $green-ultralight:#94cca8;
 $blue:#70b7d9;
 $color-gris:#878686;
-@import "./_swiper.scss";
-@import "./_post-holygrail.scss";
-strong {
-  color: $green-light;
-}
-.page-bg {
-  overflow: hidden;
-  color: $primary-text;
-  background-color: #fff;
-}
-.page {
-  padding: 0 16px;
-  @media (min-width:$break-md) {
-    padding: 0;
-  }
-}
-.block-a-1 {
-  border-radius: 16px;
-  margin-bottom: 16px;
-  background-color: $green-light;
-  position: relative;
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 133.33333%;
-  }
-  .block-a-1-wrap {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    padding: 40px 40px 48px;
-    color: $primary-text;
-    strong,
-    .h4,
-    .h6 {
-      color: white;
-    }
-  }
-}
-.block-a-2 {
-  border-radius: 16px;
-  margin-bottom: 16px;
-  border: 1px solid $green-light;
-  position: relative;
-  .block-a-2-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 40px 40px 48px
-  }
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 60%
+
+
+a{
+  &:hover{
+
+    color:$green-light;
   }
 }
 
-.container-overflow{
-  padding-bottom: 50px;
+.btn-primary{
+  background-color: $green-light;
+  border: 1px solid $green-light;
+  border-radius: 50px;
 }
+
+.btn-secondary{
+  background-color: #fff;
+ color: $green-light;
+  border: 1px solid $green-light;
+  border-radius: 50px;
+}
+
+.holycup {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  top: 50px;
+  @media (min-width: 786px) {
+    width: 40%;
+    top: 50px;
+  }
+}
+
+
+
+@import "./_swiper.scss";
+@import "./_post-holygrail.scss";
+

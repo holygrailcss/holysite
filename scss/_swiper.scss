@@ -1,92 +1,82 @@
-
-
-     .swiper-wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-transition-property: -webkit-transform;
-      transition-property: -webkit-transform;
-      transition-property: transform;
-      transition-property: transform,-webkit-transform;
-      -webkit-box-sizing: content-box;
-      box-sizing: content-box;
-  }
-
-  .swiper-container {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-}
-
-
-
 .swiper-container {
-  overflow: initial;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-}
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 20px;
-}
-.swiper-button-prev {
-  left: 0;
-  right: auto;
-}
-.swiper-button-next {
-  left: 0;
-  right: auto !important;
-  left: 40px !important;
-}
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev,
-.swiper-button-prev,
-.swiper-container-rtl .swiper-button-next {
-  top: auto !important;
-  bottom: -40px;
-}
-.swiper-button-next:after,
-.swiper-container-rtl .swiper-button-prev:after,
-.swiper-button-prev:after,
-.swiper-container-rtl .swiper-button-next:after {
-  color: white;
-}
-
-
-
-
- .active-bar {
-  position: absolute;
-  width: 100px;
-  height: 8px;
-  background-color: #fff;
-  bottom: 30px;
-  border-radius: 50px;
-}
-
- .swiper-slide-active .active-ball {
   width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+
+  font-size: 18px;
+  color: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
- .active-ball,  .swiper-slide-active .active-ball {
-  position: absolute;
-  height: 8px;
-  background-color: $green;
-  bottom: 0;
-  border-radius: 50px;
+
+.block-a-1 {
+  border-radius: 16px;
+  position: relative;
+
 }
 
-.swiper-button-next:after, .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
-  color: $green-light;
+ .swiper-button-next,
+ .swiper-button-prev,
+ .swiper-container-rtl .swiper-button-next,
+ .swiper-container-rtl .swiper-button-prev {
+   top: auto !important;
+   bottom: 0;
+ }
+ .swiper-button-next {
+   left: 0;
+   right: auto !important;
+   left: 40px !important;
+ }
+ .swiper-button-next,
+ .swiper-button-prev {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+ }
+
+ .swiper-button-next:after, .swiper-button-prev:after {
+
+  font-size: 20px;
+  color:$green-light;
+
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+
+.container-slider {
+  width: 100vw;
+  left: 0;
+  padding: 0;
+  position: relative;
+  .swiper-container {
+    overflow: initial;
+  }
+}
+@media (min-width: 1280px) {
+  .container-slider {
+    width: calc(120% + 32px);
+    left: 0;
+    margin-left: 0;
+    padding: 0;
+  }
 }

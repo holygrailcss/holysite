@@ -59,27 +59,27 @@ $font-primary:#2C2C2C;
 
 $headers:
 /* name:mobile,768,992,1280,line-height,font */
-( h1: (32px, 32px, 32px, 32px, 40px, 1.2, "bold"),
-  h2: (24px, 24px, 24px, 24px, 32px, 1.2, "bold"),
-  h3: (18px, 18px, 18px, 18px, 24px, 1.2, "medium"),
-  h4: (16px, 16px, 16px, 16px, 18px, 1.2, "medium"),
-  h5: (14px, 14px, 14px, 14px, 16px, 1.2, "medium"),
-  h6: (12px, 12px, 12px, 12px, 14px, 1.2, "medium"),
-  h7: (10px, 10px, 10px, 10px, 12px, 1.2, "medium"),
-  h8: (8px, 8px, 8px, 8px, 10px, 1.2, "medium"),
+( h1: (32px, 32px, 32px, 40px, 1.2, "bold"),
+  h2: (24px, 24px, 24px, 32px, 1.2, "bold"),
+  h3: (18px, 18px, 18px, 24px, 1.2, "medium"),
+  h4: (16px, 16px, 16px, 18px, 1.2, "medium"),
+  h5: (14px, 14px, 14px, 16px, 1.2, "medium"),
+  h6: (12px, 12px, 12px, 14px, 1.2, "medium"),
+  h7: (10px, 10px, 10px, 12px, 1.2, "medium"),
+  h8: (8px, 8px, 8px, 8px, 1.2, "medium"),
 
-  second-h1: (32px, 32px, 32px, 32px, 40px, 1.2, "2-regular"),
-  second-h2: (24px, 24px, 24px, 24px, 32px, 1.2, "2-regular"),
-  second-h3: (18px, 18px, 18px, 18px, 24px, 1.2, "2-regular"),
-  second-h4: (16px, 16px, 16px, 16px, 18px, 1.2, "2-regular"),
-  second-h5: (14px, 14px, 14px, 14px, 16px, 1.2, "2-regular"),
-  second-h6: (12px, 12px, 12px, 12px, 14px, 1.2, "2-regular"),
-  second-h7: (10px, 10px, 10px, 10px, 12px, 1.2, "2-regular"),
-  second-h8: (8px, 8px, 8px, 8px, 10px, 1.2, "2-regular"),
+  second-h1: (32px, 32px, 32px, 40px, 1.2, "2-regular"),
+  second-h2: (24px, 24px, 24px, 32px, 1.2, "2-regular"),
+  second-h3: (18px, 18px, 18px, 24px, 1.2, "2-regular"),
+  second-h4: (16px, 16px, 16px, 18px, 1.2, "2-regular"),
+  second-h5: (14px, 14px, 14px, 16px, 1.2, "2-regular"),
+  second-h6: (12px, 12px, 12px, 14px, 1.2, "2-regular"),
+  second-h7: (10px, 10px, 10px, 12px, 1.2, "2-regular"),
+  second-h8: (8px, 8px, 8px, 10px, 1.2, "2-regular"),
 
-  p1: (12px, 12px, 12px, 12px, 14px, 1.4, "regular"),
-  p2: (14px, 14px, 16px, 16px, 18px, 1.4, "regular"),
-  p4: (14px, 14px, 16px, 16px, 18px, 1.4, "medium"));
+  p1: (14px, 14px, 14px, 14px, 1.4, "regular"),
+  p2: (14px, 14px, 16px, 18px, 1.4, "regular"),
+  p4: (14px, 14px, 16px, 18px, 1.4, "medium"));
 
 
 
@@ -98,7 +98,7 @@ $headersFluids: (/*name :  fontsize, lineheight */
 12 : (12px, 12px, 1.2),
 14 : (14px, 12px, 1.2),
 16 : (16px, 12px, 1.2),
-18 : (18px, 12px, 1.2),
+18 : (18px, 24px, 1.2),
 20 : (14px, 32px, 1.2),
 50 : (30px, 50px, 1.2),
 100 : (40px, 100px, .9)
