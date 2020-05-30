@@ -26,9 +26,9 @@ a {
 |       -FASE 2 : IMPORTA TU HOLYGRAIL
 +------------------------------------------------------------+*/
 //desde tu duttistatic
-@import "../../holygrailcss/scss/partials";
+//@import "../../holygrailcss/scss/partials";
 //desde tu nodemodules
-//@import "../node_modules/holygrailcss/scss/hgpartials.scss";
+@import "../node_modules/holygrailcss/scss/hgpartials.scss";
 //debugamos
 //@import "../../holygrailcss/scss/abstract/0debug";
 
