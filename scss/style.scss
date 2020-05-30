@@ -82,3 +82,49 @@ a{
 @import "./_swiper.scss";
 @import "./_post-holygrail.scss";
 
+
+
+
+.svg-bg {
+  -webkit-box-direction: normal !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-align: stretch !important;
+  -ms-flex-align: stretch !important;
+  -webkit-align-items: stretch !important;
+  align-items: stretch !important;
+  border-width: 0px !important;
+  border-style: solid !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+  -webkit-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+  padding: 0px !important;
+  position: relative !important;
+  z-index: 0 !important;
+  min-height: 0px !important;
+  min-width: 0px !important;
+  width: 100% !important;
+  margin: 0 0 80px 0 !important;
+
+
+  svg{
+
+    display: block;
+    -ms-flex-item-align: center !important;
+    position: absolute !important;
+    width: 100% !important;
+    overflow: visible !important;
+    z-index: -1 !important;
+    top: 0px !important;
+    -webkit-align-self: center !important;
+    align-self: center !important;
+    min-height: 100% !important;
+
+  }
+}
