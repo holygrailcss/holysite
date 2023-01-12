@@ -1,110 +1,75 @@
+# Web digitalstrategy , parcel , nunjuckts
 
-# HOLYSITE
+Este es un generador de sitios web estático llamado "Web holysite", utiliza herramientas como Parcel , dart sass,  Nunjuckts.
 
-Styles are broken down into the following groups: **Base, Layout, Atoms, Molecules, Organisms, States, Themes, Utilities and Overrides**
-
-## Getting Started
-
-
-
-1- Create a folder git clone https://github.com/holygrailcss/holysite.git
-
-2- gulp build
-
-1. If needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
-- If needed, install `gulp` with `npm install gulp -g`.
-
-- In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
-- In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`. This should install all [dependencies](#dependencies).
-- In terminal, enter `gulp`.
-- Your browser should open at `http://localhost:3000`. You can access this same page on any device on the same wifi network and they'll see whats on your screen. It'll even sync scrolls and clicks!
-- Edit your code inside of the `src` folder.
-- Your complied and minified css, html, and javascript files will be created and updated in `dist/`. Never edit files within the `dist/` folder, as it gets deleted frequently.
-- Keep `gulp` running while you're making changes. When you want to stop the gulp task, hit `ctrl + C`.
-
-_For theming: add separate file (theme.scss) in`src/scss/themes/`, override the default `$theme` variable, and run `gulp themes`._
-
-## Requirements
-- Node/NPM
-- LibSass
-- Gulp
+Para desarrollar en él, primero debes clonar o descargar este repositorio. Luego, debes instalar las dependencias utilizando npm install. Finalmente, puedes ejecutar el modo de desarrollo con npm run start, esto abrirá una pestaña en el navegador con la url de desarrollo "http://localhost:1234/".
 
 
 
-## Features
-- Live reloading with BrowserSync  NOT yet
-- Image Minification    NOT yet
-- Github Pages deployment
-- Sass linting (based on [default](https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml) config)
-- Autoprefixer configuration    NOT yet
-- SMACSS and Atomic Design-based folder structure
-- `px` to `em`, `px` to `rem` and other useful functions.
-- Mixins for inlining media queries.
-* Useful CSS helper classes.
-* Default print styles, performance optimized.   NOT yet
-* "Delete-key friendly." Easy to strip out parts you don't need.
-- Includes:
-  - [`Normalize.css`](https://necolas.github.com/normalize.css/)
-    for CSS normalizations and common bug fixes
-  - [`CSS Pesticide`](https://pesticide.io) for easy CSS debugging
-  - [`jQuery`](https://jquery.com/) via CDN, with a local fallback
-  - [`Modernizr`](http://modernizr.com/), via CDN, for feature
-    detection
-  - [`Apache Server Configs`](https://github.com/h5bp/server-configs-apache)
-    that, among other, improve the web site's performance and security
+## Development
 
-## Dependencies
-```
-      "autoprefixer": "^9.7.4",
-        "browser-sync": "^2.26.7",
-        "cssnano": "^4.1.10",
-        "eslint": "^4.19.1",
-        "gulp": "^4.0.2",
-        "gulp-inject": "^5.0.5",
-        "gulp-postcss": "^8.0.0",
-        "gulp-rename": "^2.0.0",
-        "gulp-sass": "^4.0.2",
-        "gulp-sourcemaps": "^2.6.5",
-        "holygrailcss": "^1.4.8",
-        "interactjs": "^1.8.5",
-        "node-sass": "^4.13.1"
+1. **Clone** or [download](https://github.com/.....zip) this repository.
+
+   ```
+   git clone https://github.com/.....zip
+   ```
+
+2. **Install** dependencias.
+
+   ```
+   npm install
+   ```
+
+3. **Run** dev mode. It will open a browser tab with the dev url [`http://localhost:1234/`](http://localhost:1234/).
+
+   ```
+   npm run start
+   ```
+
+## Production build
+
+Ejecuta el script de construcción y el sitio web optimizado para producción será generado en la carpeta /dist.
 
 ```
-
-## Tasks
-
-- default
-  -test
-  -scss
-  -guide
-  -build
-
-
-
-## Directory structure
-
-```
-┌── .gitignore
-├── .htaccess
-├── src
-│   ├── browserconfig.xml
-│   ├── crossdomain.xml
-│   ├── humans.txt
-│   ├── icons
-│   │   ├── apple-touch-icon-114x114-precomposed.png
-│   ├── img
-│   └── index.html
-
-├── gulpfile.js
-└── package.json
+npm run build
 ```
 
-## Bugs & Support
-Developed by Manuel Ruiz. Please list all bugs and feature requests in the Github issue tracker.
+## Serve production build localmente
 
-## Thanks & Resources
+Si deseas servir tu build de producción (la carpeta generada /dist) localmente, solo debes ejecutar este comando y abrir http://localhost:5000/ en tu navegador. Este comando ejecuta el comando npm run build antes de servir la carpeta /dist.
 
-This toolkit is based on the work of the following fine people & projects.
+```
+npm run serve
+```
 
-- [Holygrail Boilerplate](https://github.com/holygrailcss/holygrail-boilerplate)
 
+## Habilita emmet en este archivo
+
+
+ "emmet.includeLanguages": {
+    "nunjucks": "html"
+  }
+
+## Tech stack
+
+- [Parcel](https://parceljs.org/)
+- [Babel](https://babeljs.io/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Sass](https://sass-lang.com/)
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
+- [Stylelint](https://stylelint.io/)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Imagemin](https://github.com/imagemin/imagemin)
+
+## To do
+
+- [ ] Detail all features: linting, formatting, building, etc.
+- [ ] Add all available commands.
+- [ ] Explain why there are two `/static` folders.
+- [ ] Warn against how Parcel treats the `site.webmanifest` file.
+- [ ] Explain how to config Imagemin.
+- [ ] Explain how to config Nunjucks.
+- [ ] Find a good Nunjucks code editor formatter.
+- [ ] Add recommended extensions for development.
+- [ ] Repair arrows in swiper

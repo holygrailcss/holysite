@@ -1,0 +1,57 @@
+{% extends "html/templates/base.njk" %}
+{% block documentTitle %}Home{% endblock %}
+	{% import 'html/templates/_globals.njk' as globals %}
+    {% block content %}
+  <div class="is-home "  >
+      <div class="container"  > 
+    <section   >
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="  height-full is-flex  flex-column content-center">
+                  digitalstrategy
+              <h1 class="fluid-48-b"> Algunos trabajan con quien pueden , <br> nosotros con quien <b>queremos</b>. </h1>
+            </div>
+          </div>
+    </section>
+    <section   >
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="  height-full is-flex  flex-column content-center">
+                    Seccion 2
+              <h1 class="fluid-48-b"> Algunos trabajan con quien pueden , <br> nosotros con quien <b>queremos</b>. </h1>
+            </div>
+          </div>
+    </section>
+  {% include "html/partials/_proyectos.njk" %}
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                          <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+        
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+      </div>
+    </div>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

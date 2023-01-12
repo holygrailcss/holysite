@@ -13,6 +13,7 @@ assets/
 
 # Compiled output
 dist/
+.cache/
 build/
 scss/style.scss
 

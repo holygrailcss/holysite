@@ -1,0 +1,23 @@
+<section    class="proyectos  pt-header-height pb-header-height" id="proyectos">
+
+  <div class="container--full">
+    <div class="row">
+      <div class="col-xs-12 height-md"> 
+
+    <div class="fluid-80-b">Directorio</div> 
+
+      </div>
+    </div>
+  </div>
+  <div class="container--full">
+
+
+
+
+    {% for proyecto in proyectos %}
+
+      {% include "html/partials/_proyecto.njk" %}
+    {% endfor %}
+
+  </div>
+</section>
